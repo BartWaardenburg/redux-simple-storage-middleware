@@ -7,7 +7,7 @@ import {storageTest} from './utils';
  * @param  defaultReponse The response to give when no storage can be used or if their is nothing available
  * @return                The state last stored in storage
  */
-export const getStorage = ({
+export const getStorageState = ({
   key,
   type = 'sessionStorage',
   defaultReponse,

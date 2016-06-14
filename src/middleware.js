@@ -10,7 +10,7 @@ let storagePossible: ?boolean;
  * @param  name The identifier to be used to retreive state from session storage
  * @return      The final result when all reducers have been run
  */
-export const createSessionStorageMiddleware = ({
+export const createStorageMiddleware = ({
   key,
   type = 'sessionStorage',
 }: {
