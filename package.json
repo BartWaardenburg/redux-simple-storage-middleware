@@ -1,6 +1,6 @@
 {
   "name": "redux-simple-storage-middleware",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Simple redux middleware which will store the current state tree in either session- or localstorage",
   "main": "lib/index.js",
   "scripts": {
