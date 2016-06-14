@@ -1,3 +1,4 @@
+/* @flow */
 /**
  * This will test whether the requested type of storage is available or not
  * @param  type The type of storage to test
@@ -18,6 +19,8 @@ export const storageTest = (type: string): boolean => {
       sessionStorage.removeItem(test);
       return true;
     }
+
+    return false;
   } catch (e) {
     return false;
   }

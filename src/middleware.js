@@ -1,3 +1,4 @@
+/* @flow */
 import {storageTest} from './utils';
 
 /**
@@ -35,3 +36,5 @@ export const createStorageMiddleware = ({
 
 	return result;
 };
+
+export default createStorageMiddleware;
