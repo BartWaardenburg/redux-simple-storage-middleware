@@ -4,6 +4,7 @@
   "description": "Simple redux middleware which will store the current state tree in either session- or localstorage",
   "main": "lib/index.js",
   "scripts": {
+    "prepublish": "npm run lint && npm run flow && npm run build",
     "build": "babel ./src -d ./lib --ignore '.spec'",
     "lint": "eslint src/**/*.js",
     "flow": "flow check",
