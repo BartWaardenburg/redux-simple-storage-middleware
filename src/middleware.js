@@ -7,9 +7,11 @@ import {storageTest} from './utils';
 let storagePossible: ?boolean;
 
 /**
- * This middleware for redux will store the application state in session storage
- * @param  name The identifier to be used to retreive state from session storage
- * @return      The final result when all reducers have been run
+ * This middleware for redux will store the application state in storage
+ * @param  settings      An object containing the settings for the middleware
+ * @param  settings.key  The identifier to be used to store state in storage
+ * @param  settings.type The type of storage to use either sessionStorage or localStorage
+ * @return               The final result when all reducers have run
  */
 export const createStorageMiddleware = ({
   key,

@@ -3,10 +3,11 @@ import {storageTest} from './utils';
 
 /**
  * This will get the application state from storage when available
- * @param  key            The identifier to be used to retreive state from session storage
- * @param  type           The type of storage to use either sessionStorage or localStorage
- * @param  defaultReponse The response to give when no storage can be used or if their is nothing available
- * @return                The state last stored in storage
+ * @param  settings                Object containing all settings for the state retreival
+ * @param  settings.key            The identifier to be used to retreive state from storage
+ * @param  settings.type           The type of storage to use either sessionStorage or localStorage
+ * @param  settings.defaultReponse The response to give when no storage can be used or if their is nothing available
+ * @return                         The state last stored in storage
  */
 export const getStorageState = ({
   key,
