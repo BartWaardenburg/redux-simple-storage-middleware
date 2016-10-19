@@ -10,27 +10,30 @@ import {storageTest} from './utils';
  * @return                         The state last stored in storage
  */
 export const getStorageState = ({
-  key,
-  type = 'sessionStorage',
-  defaultReponse,
+	key,
+	type = 'sessionStorage',
+	defaultReponse,
 }: {
-  key: string,
-  type: string,
-  defaultReponse: any
+	key: string,
+	type: string,
+	defaultReponse: any
 }) => {
-  if (storageTest(type)) {
-    let data: ?string;
+	if (storageTest(type)) {
+		let data: ?string;
 
-    if (type === 'localStorage') {
-      data = localStorage.getItem(key);
-    }
+		if (type === 'localStorage') {
+			data = localStorage.getItem(key);
+		}
 
-    if (type === 'sessionStorage') {
-      data = sessionStorage.getItem(key);
-    }
+		if (type === 'sessionStorage') {
+			data = sessionStorage.getItem(key);
+		}
 
-    return data ? JSON.parse(data) : defaultReponse;
-  } else {
-    return defaultReponse;
-  }
+		return data ? {
+			...defaultReponse,
+			...JSON.parse(data),
+		} : defaultReponse;
+	} else {
+		return defaultReponse;
+	}
 };
