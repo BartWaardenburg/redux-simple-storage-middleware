@@ -76,5 +76,8 @@
     "eslint-plugin-flowtype": "^2.2.7",
     "flow-bin": "^0.27.0",
     "nyc": "^6.4.4"
+  },
+  "dependencies": {
+    "lodash.omit": "^4.5.0"
   }
 }

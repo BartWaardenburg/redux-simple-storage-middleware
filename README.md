@@ -86,11 +86,23 @@ This middleware for redux will store the application state in storage
 -   `settings`  An object containing the settings for the middleware
     -   `settings.key`  The identifier to be used to store state in storage
     -   `settings.type`  The type of storage to use either sessionStorage or localStorage
+    -   `settings.exclude`  The reducers to exclude from storing
 -   `$0` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
     -   `$0.key`  
     -   `$0.type`   (optional, default `'sessionStorage'`)
+    -   `$0.exclude`  
 
 Returns **** The final result when all reducers have run
+
+### storageTest
+
+This will test whether the requested type of storage is available or not
+
+**Parameters**
+
+-   `type` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The type of storage to test
+
+Returns **** True or false depending on whether the storage is available or not
 
 ### getStorageState
 
@@ -108,13 +120,3 @@ This will get the application state from storage when available
     -   `$0.defaultReponse`  
 
 Returns **** The state last stored in storage
-
-### storageTest
-
-This will test whether the requested type of storage is available or not
-
-**Parameters**
-
--   `type` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The type of storage to test
-
-Returns **** True or false depending on whether the storage is available or not
