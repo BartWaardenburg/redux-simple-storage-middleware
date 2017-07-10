@@ -38,11 +38,11 @@ export const createStorageMiddleware = ({
 
 	if (storagePossible) {
 		if (type === 'sessionStorage') {
-			sessionStorage.setItem(key, JSON.stringify(state));
+			window.sessionStorage.setItem(key, JSON.stringify(state));
 		}
 
 		if (type === 'localStorage') {
-			localStorage.setItem(key, JSON.stringify(state));
+			window.localStorage.setItem(key, JSON.stringify(state));
 		}
 	}
 

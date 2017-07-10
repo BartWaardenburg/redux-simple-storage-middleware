@@ -1,10 +1,10 @@
 /* @flow */
 
 export {
-  default,
-  createStorageMiddleware,
+	default,
+	createStorageMiddleware,
 } from './middleware';
 
 export {
-  getStorageState,
+	getStorageState,
 } from './state';

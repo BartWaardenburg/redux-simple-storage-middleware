@@ -22,11 +22,11 @@ export const getStorageState = ({
 		let data: ?string;
 
 		if (type === 'localStorage') {
-			data = localStorage.getItem(key);
+			data = window.localStorage.getItem(key);
 		}
 
 		if (type === 'sessionStorage') {
-			data = sessionStorage.getItem(key);
+			data = window.sessionStorage.getItem(key);
 		}
 
 		return data ? {
