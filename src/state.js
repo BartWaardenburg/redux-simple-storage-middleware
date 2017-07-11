@@ -17,7 +17,7 @@ export const getStorageState = ({
 	key: string,
 	type: string,
 	defaultReponse: any
-}) => {
+}): any => {
 	if (storageTest(type)) {
 		let data: ?string;
 
